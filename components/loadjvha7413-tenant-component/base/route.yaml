@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: loadjvha7413-tenant-component
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: loadjvha7413-tenant-component
+    app.kubernetes.io/part-of: loadjvha7413-tenant-app
+  name: loadjvha7413-tenant-component
+  namespace: loadjvha7413-tenant
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: loadjvha7413-tenant-component
+    weight: null
+status: {}
